@@ -8,16 +8,34 @@ body {
   font-family: 'montseratt', sans-serif;
 }
 
-.app {
+.app.cold.dry {
   background-image: url('./assets/cold.jpg');
   background-size: cover;
   background-position: bottom;
   transition: 0.4s ease-out;
 }
 
-.app.warm {
-  background-image: url('./assets/warm.jpg');
+.app.warm.dry {
+  background-image:  url('./assets/warm.jpg');
 }
+
+.app.warm.rain {
+  background-image: url('./assets/warm.jpg'), url('./assets/rain.gif');
+  background-position: bottom, bottom;
+}
+
+.app.cold.rain {
+
+}
+
+.app.cold.snow {
+
+}
+
+.app.night {
+
+}
+
 
 main {
   min-height: 100vh;
