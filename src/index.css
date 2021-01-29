@@ -17,19 +17,29 @@ body {
 
 .app.warm.dry {
   background-image:  url('./assets/warm.jpg');
+  background-size: cover;
+  background-position: bottom;
+  transition: 0.4s ease-out;
 }
 
 .app.warm.rain {
-  background-image: url('./assets/warm.jpg'), url('./assets/rain.gif');
-  background-position: bottom, bottom;
+  background-image: url('./assets/rain.gif'), url('./assets/warm.jpg');
+  background-position: bottom;
+  transition: 0.4s ease-out;
 }
 
 .app.cold.rain {
-
+  background-image: url('./assets/rain.gif'), url('./assets/cold.jpg');
+  background-size: cover;
+  background-position: bottom;
+  transition: 0.4s ease-out;
 }
 
 .app.cold.snow {
-
+  background-image: url('./assets/snow.gif'), url('./assets/cold.jpg');
+  background-size: cover;
+  background-position: bottom;
+  transition: 0.4s ease-out;
 }
 
 .app.night {

@@ -35,7 +35,16 @@ function App() {
   }
 
   return (
-    <div className={(typeof weather.main != 'undefined') ? ((weather.main.temp > 60) ? 'app warm dry' : 'app cold dry') : 'app cold dry'
+    <div className={(typeof weather.main != 'undefined') ?   
+     (weather.main.temp >= 60 && weather.weather[0].main === 'clouds') ? 'app warm dry' 
+    : (weather.main.temp >= 60 && weather.weather[0].main === 'clear') ? 'app warm dry' 
+    : (weather.main.temp >= 60 && weather.weather[0].main === 'rain') ? 'app warm rain'
+    : (weather.main.temp < 60 && weather.weather[0].main === 'clouds') ? 'app cold dry'
+    : (weather.main.temp < 60 && weather.weather[0].main === 'clear') ? 'app cold dry'
+    : (weather.main.temp < 60 && weather.weather[0].main === 'rain') ? 'app cold rain'
+    : (weather.main.temp < 60 && weather.weather[0].main === 'snow') ? 'app cold snow'
+    : 'app cold dry'
+    : 'app warm dry'
     }>
       <main>
         <div className='search-box'>
